@@ -1,0 +1,143 @@
+﻿Bộ chia dữ liệu: thư mục database
+Hướng dẫn cài đặt: (Python 2.7)
+- Các thư viện yêu cầu:
+pip install tensorflow (hoặc tensorflow-gpu)
+pip install keras 
+pip install h5py
+
+- File chạy bao gồm:
+
+* Khởi tạo chéo tham số từ luồng không gian sang luồng thời gian
+cross_weights.py
+usage: python cross_weights.py
+
+
+* Chạy luồng không gian
+spatial.py
+
+usage: python spatial.py [-h] [-p PROCESS] [-data DATASET]
+                                           [-b BATCH] [-c CLASSES] [-e EPOCH]
+                                           [-dropout DROPOUT] [-r RETRAIN]
+                                           [-cross CROSS] [-s SUMMARY]
+                                           [-lr LR] [-decay DECAY]
+                                           [-fine FINE] [-n NEURAL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PROCESS, --process PROCESS
+                        Process
+  -data DATASET, --dataset DATASET
+                        Dataset
+  -b BATCH, --batch BATCH
+                        Batch size
+  -c CLASSES, --classes CLASSES
+                        Number of classes
+  -e EPOCH, --epoch EPOCH
+                        Number of epochs
+  -dropout DROPOUT, --dropout DROPOUT
+                        Dropout
+  -r RETRAIN, --retrain RETRAIN
+                        Number of old epochs when retrain
+  -cross CROSS, --cross CROSS
+                        Cross fold
+  -s SUMMARY, --summary SUMMARY
+                        Show model
+  -lr LR, --lr LR       Learning rate
+  -decay DECAY, --decay DECAY
+                        Decay
+  -fine FINE, --fine FINE
+                        Fine-tuning
+  -n NEURAL, --neural NEURAL
+                        LSTM neural
+
+
+* Chạy luồng thời gian:
+temporal.py
+
+usage: python temporal.py [-h] [-p PROCESS] [-data DATASET]
+                                            [-b BATCH] [-c CLASSES] [-e EPOCH]
+                                            [-dropout DROPOUT] [-r RETRAIN]
+                                            [-cross CROSS] [-s SUMMARY]
+                                            [-lr LR] [-decay DECAY]
+                                            [-fine FINE] [-n NEURAL]
+                                            [-t TEMPORAL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PROCESS, --process PROCESS
+                        Process
+  -data DATASET, --dataset DATASET
+                        Dataset
+  -b BATCH, --batch BATCH
+                        Batch size
+  -c CLASSES, --classes CLASSES
+                        Number of classes
+  -e EPOCH, --epoch EPOCH
+                        Number of epochs
+  -dropout DROPOUT, --dropout DROPOUT
+                        Dropout
+  -r RETRAIN, --retrain RETRAIN
+                        Number of old epochs when retrain
+  -cross CROSS, --cross CROSS
+                        Cross fold
+  -s SUMMARY, --summary SUMMARY
+                        Show model
+  -lr LR, --lr LR       Learning rate
+  -decay DECAY, --decay DECAY
+                        Decay
+  -fine FINE, --fine FINE
+                        Fine-tuning
+  -n NEURAL, --neural NEURAL
+                        LSTM neural
+  -t TEMPORAL, --temporal TEMPORAL
+                        Temporal rate
+
+* Chạy song luồng:
+multi.py
+
+usage: python multi.py [-h] [-p PROCESS] [-data DATASET]
+                                    [-b BATCH] [-c CLASSES] [-e EPOCH]
+                                    [-dropout DROPOUT] [-r RETRAIN]
+                                    [-cross CROSS] [-s SUMMARY] [-lr LR]
+                                    [-decay DECAY] [-fine FINE] [-n NEURAL]
+                                    [-t TEMPORAL] [-w WEIGHTS] [-ws W_SPATIAL]
+                                    [-wt W_TEMPORAL]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PROCESS, --process PROCESS
+                        Process
+  -data DATASET, --dataset DATASET
+                        Dataset
+  -b BATCH, --batch BATCH
+                        Batch size
+  -c CLASSES, --classes CLASSES
+                        Number of classes
+  -e EPOCH, --epoch EPOCH
+                        Number of epochs
+  -dropout DROPOUT, --dropout DROPOUT
+                        Dropout
+  -r RETRAIN, --retrain RETRAIN
+                        Number of old epochs when retrain
+  -cross CROSS, --cross CROSS
+                        Cross fold
+  -s SUMMARY, --summary SUMMARY
+                        Show model
+  -lr LR, --lr LR       Learning rate
+  -decay DECAY, --decay DECAY
+                        Decay
+  -fine FINE, --fine FINE
+                        Fine-tuning
+  -n NEURAL, --neural NEURAL
+                        LSTM neural
+  -t TEMPORAL, --temporal TEMPORAL
+                        Temporal rate
+  -w WEIGHTS, --weights WEIGHTS
+                        Weights
+  -ws W_SPATIAL, --w_spatial W_SPATIAL
+                        Spatial epoch pretrain
+  -wt W_TEMPORAL, --w_temporal W_TEMPORAL
+                        Temporal epoch pretrain
+
+
+
